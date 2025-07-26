@@ -1,0 +1,159 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.swiper-wrapper {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* если это ul */
+  display: flex;
+}
+
+.feedback-section .swiper-slide {
+  min-height: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.feedback-section .container {
+  background-color: #fceee6;
+  padding: 64px 16px;
+}
+.feedback-section-title {
+  font-size: 36px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+}
+.feedback-section-subtitle {
+  margin-bottom: 80px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+.feedback-card {
+  background: #fceee6;
+  border: 1px solid #666;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  min-height: 314px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.quote {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 24px;
+  overflow-wrap: anywhere;
+}
+.author {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.name {
+  font-weight: 600;
+  line-height: 150%;
+}
+.role {
+  color: #666;
+}
+/* Управление */
+.feedbacks-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.feedback-pagination-dots {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.dot.active,
+.dot.swiper-pagination-bullet-active {
+  background: #000;
+}
+
+.feedback-navigation-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.fnav-btn {
+  background: #f26722;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fnav-btn:disabled {
+  background-color: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* Adaptive */
+@media (min-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    min-height: 244px;
+  }
+
+  .quote {
+    width: 276px;
+  }
+
+  .feedback-pagination-dots,
+  .feedback-navigation-buttons {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .feedback-section .container {
+    padding: 64px;
+  }
+
+  .feedback-card {
+    min-height: 217px;
+    min-width: 421px;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .feedback-section-title {
+    font-size: 48px;
+  }
+
+  .quote {
+    width: 357px;
+  }
+}
